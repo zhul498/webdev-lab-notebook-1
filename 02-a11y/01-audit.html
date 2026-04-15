@@ -6,27 +6,33 @@
     <title>Exercise 01 - Audit</title>
   </head>
   <body>
-    <form>
-      Name:<br />
-      <input type="text" name="name" /><br /><br />
-      Address:<br />
-      <input type="text" name="address" />
-      <br /><br />
-      City:<br />
-      <input type="text" name="city" />
-      <br /><br />
-      Zip Code:<br />
-      <input type="text" name="zip" />
-      <br /><br />
-      Credit Card Type:<br />
-      <input type="radio" name="card" value="visa" /> Visa<br />
-      <input type="radio" name="card" value="mastercard" /> MasterCard<br />
-      <input type="radio" name="card" value="amex" /> American Express<br /><br />
-      Credit Card Number:<br />
-      <input type="text" name="cc_number" /><br /><br />
-      CVV:<br />
-      <input type="text" name="cvv" /><br /><br />
-      <input type="button" value="Submit" />
-    </form>
+    <main>
+      <form>
+        <label for="Name">Name:</label><br />
+        <input type="text" name="name" id="Name"/><br /><br />
+        <label for="Address">Address:</label><br />
+        <input type="text" name="address" id="Address"/>
+        <br /><br />
+        <label for="City">City:</label><br />
+        <input type="text" name="city" id="City"/>
+        <br /><br />
+        <label for="Zip Code">Zip Code:</label><br />
+        <input type="text" name="zip" id="Zip Code"/>
+        <br /><br />
+        <label for="Credit Card Type">Credit Card Type:</label><br />
+        <input type="radio" name="card" value="visa" id="Visa"/>
+        <label for="Visa">Visa</label><br /> <br />
+        <input type="radio" name="card" value="mastercard" id="MasterCard"/> 
+        <label for="MasterCard">MasterCard</label><br /> <br />
+        <input type="radio" name="card" value="amex" id="American Express"/> 
+        <label for="American Express">American Express</label><br /><br /> <br />
+        <label for="Credit Card Number">Credit Card Number:</label><br />
+        <input type="text" name="cc_number" id="Credit Card Number"/><br /><br />
+        <label for="CVV">CVV:</label><br />
+        <input type="text" name="cvv" id="CVV"/><br /><br />
+        <input type="button" value="Submit" />
+      </form>
+    </main>
+
   </body>
 </html>
