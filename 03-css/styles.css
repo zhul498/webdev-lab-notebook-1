@@ -1,1 +1,147 @@
-/* Add your CSS code here  */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap");
+
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+  --midnight-blue: #161678;
+}
+
+/* ===== BOOKS PAGE ===== */
+body {
+  margin: 0;
+  font-family: Sans-serif, serif;
+  background: #f3f4f6;
+  color: #1a1a2e;
+}
+
+header {
+  background: var(--dark-slate-infinity);
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+header a {
+  font-family: "Cinzel", serif;
+  color: var(--ice-blue-juvie);
+  text-decoration: none;
+  padding: 8px 18px;
+  display: block;
+  border-radius: 500px;
+}
+
+header a:hover {
+  background: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+}
+
+h1,
+h2 {
+  font-family: "Cinzel", serif;
+}
+
+h1 {
+  text-align: center;
+  color: var(--gothic-gray-blue);
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+#books ul,
+#books ol {
+  line-height: 2;
+}
+
+#covers img {
+  transition: transform 0.2s ease;
+}
+
+#covers img:hover {
+  transform: scale(1.07);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+/* ===== FORM PAGE ===== */
+body:has(form) {
+  background: #04082e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body:has(form) main {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 50px;
+}
+
+body:has(form) h1 {
+  font-family: Sans-serif;
+  text-align: center;
+  color: var(--midnight-blue);
+}
+
+body:has(form) form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body:has(form) input[type="text"],
+body:has(form) input[type="number"] {
+  padding: 10px 14px;
+  border: 1px solid #c8cdd6;
+  border-radius: 10px;
+}
+
+body:has(form) fieldset {
+  border: none;
+}
+
+body:has(form) fieldset legend {
+  font-weight: bold;
+}
+
+body:has(form) form > div:last-of-type {
+  gap: 12px;
+}
+
+body:has(form) input[type="submit"],
+body:has(form) input[type="reset"] {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body:has(form) input[type="submit"] {
+  background: var(--midnight-blue);
+  color: white;
+  font-weight: 600;
+}
+
+body:has(form) input[type="reset"] {
+  background: #e0e0e0;
+  color: #333;
+}
