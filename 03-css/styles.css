@@ -1,147 +1,205 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap");
 
 :root {
-  --ice-blue-juvie: #8fbcd4;
+  --background-color: #f7f7f7 --text-color: #333333 --ice-blue-juvie: #8fbcd4;
   --gothic-gray-blue: #6f8796;
   --dark-slate-infinity: #1f2a33;
+  --gray-border: #cccccc;
+  --table-emphasis-background: #e9e8e8;
+  --table-background: #f4f4f4;
+  --form-white: #fefefe;
   --midnight-blue: #161678;
+  --midnight-blue-dark: #0b0b4f;
 }
 
-/* ===== BOOKS PAGE ===== */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: Sans-serif, serif;
-  background: #f3f4f6;
-  color: #1a1a2e;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-header {
-  background: var(--dark-slate-infinity);
-}
-
-header ul {
-  display: flex;
-  justify-content: center;
+fieldset {
   margin: 0;
-  padding: 10px 0;
+  border: 0;
+  padding: 0;
 }
 
-header a {
-  font-family: "Cinzel", serif;
-  color: var(--ice-blue-juvie);
+/* Navigation styles  */
+.nav {
+  background-color: var(--dark-slate-infinity);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 1rem;
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
   text-decoration: none;
-  padding: 8px 18px;
-  display: block;
-  border-radius: 500px;
+  font-weight: 500;
+  color: var(--ice-blue-juvie);
+  transition:
+    background 0.5s,
+    color 0.5s;
 }
 
-header a:hover {
-  background: var(--ice-blue-juvie);
+.nav-link:hover {
+  background-color: var(--ice-blue-juvie);
   color: var(--dark-slate-infinity);
 }
 
-h1,
-h2 {
-  font-family: "Cinzel", serif;
+/* Main area */
+.books-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0 1rem;
 }
 
-h1 {
+.main-heading {
+  margin: 2rem;
   text-align: center;
   color: var(--gothic-gray-blue);
 }
 
-h2 {
-  border-bottom: 1px solid #ccc;
+.font-cinzel {
+  font-family: "Cinzel";
 }
 
-#books ul,
-#books ol {
-  line-height: 2;
+/* Section styles */
+.section {
+  margin-top: 2rem;
 }
 
-#covers img {
-  transition: transform 0.2s ease;
+.h2 {
+  border-bottom: 1px solid var(--gray-border);
 }
 
-#covers img:hover {
-  transform: scale(1.07);
+/* Book lists styles */
+.books-list li {
+  margin-bottom: 0.5rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.books-list li > ol {
+  margin-top: 0.4rem;
 }
 
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 8px;
+/* Images Styles */
+.images-container {
   text-align: center;
 }
 
-/* ===== FORM PAGE ===== */
-body:has(form) {
-  background: #04082e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.book-image {
+  border-radius: 5px;
+  transition: transform 0.2s ease;
 }
 
-body:has(form) main {
-  background: white;
-  border-radius: 20px;
-  padding: 40px 50px;
+.book-image:hover {
+  transform: scale(1.1);
 }
 
-body:has(form) h1 {
-  font-family: Sans-serif;
+/* Table styles */
+.table {
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--gray-border);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table-heading {
+  background-color: var(--table-emphasis-background);
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--table-background);
+}
+
+.table-footer td {
+  font-weight: bold;
+  background-color: var(--table-emphasis-background);
+}
+
+/* Form - IRA ROTH Calculator */
+
+.form-container {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--form-white);
+}
+
+.color-bg-blue {
+  background-color: var(--midnight-blue-dark);
+}
+
+.main-heading-form {
   text-align: center;
   color: var(--midnight-blue);
 }
 
-body:has(form) form > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.form-element {
+  margin-bottom: 0.5rem;
 }
 
-body:has(form) input[type="text"],
-body:has(form) input[type="number"] {
-  padding: 10px 14px;
-  border: 1px solid #c8cdd6;
-  border-radius: 10px;
+.form-label {
+  display: inline-block;
+  width: 48%;
 }
 
-body:has(form) fieldset {
-  border: none;
+.form-input {
+  display: inline-block;
+  width: 45%;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  padding: 0.5rem;
 }
 
-body:has(form) fieldset legend {
-  font-weight: bold;
+.btn {
+  display: inline-block;
+  width: 49%;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
 }
 
-body:has(form) form > div:last-of-type {
-  gap: 12px;
+.form-element:last-of-type {
+  margin: 2rem 0;
 }
 
-body:has(form) input[type="submit"],
-body:has(form) input[type="reset"] {
-  flex: 1;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
+.btn-submit {
+  background-color: var(--midnight-blue);
+  color: var(--form-white);
 }
 
-body:has(form) input[type="submit"] {
-  background: var(--midnight-blue);
-  color: white;
-  font-weight: 600;
+.btn-submit:hover {
+  background-color: var(--midnight-blue-dark);
 }
 
-body:has(form) input[type="reset"] {
-  background: #e0e0e0;
-  color: #333;
+.form-note {
+  font-size: 0.8rem;
+}
+
+.form-note a {
+  color: var(--midnight-blue);
+}
+
+.form-radios {
+  margin-left: 40px;
+  margin-bottom: 0.75rem;
 }
